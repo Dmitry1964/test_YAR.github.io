@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+
+#root {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+[data-section] {
+  width: 100%;
+  padding-top: 100vh;
+  padding-bottom: 100vh;
+  background-image: url("dust.png");
+  transition: transform 0.5s ease;
+}
+
+.stop {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.els {
+  display: flex;
+}
+
+.el {
+  width: 15vmax;
+  height: 15vmax;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.el:not(:last-child) {
+  margin-right: 5vmax;
+}
+
+.el_1 {
+  transform: translateY(calc( (1 - var(--items-progress)) * 30vh ));
+}
+
+.el_2 {
+  transform: translateY(calc( (1 - var(--items-progress)) * 40vh ));
+}
+
+.el_3 {
+  transform: translateY(calc( (1 - var(--items-progress)) * 50vh ));
+}
